@@ -29,6 +29,11 @@ services:
     environment:
       - 'OLLAMA_BASE_URL=http://ollama:11434'
       - 'WEBUI_SECRET_KEY=personal-secret-key-12345'
+      - 'WEB_SEARCH_RESULT_COUNT=3'
+      - 'WEB_LOADER_CONCURRENT_REQUESTS=2'
+      - 'WEB_SEARCH_CONCURRENT_REQUESTS=1'
+      - 'ENABLE_QUERIES_CACHE=True'
+      - 'WEB_FETCH_MAX_CONTENT_LENGTH=15000'
     restart: unless-stopped
 
   searxng:
