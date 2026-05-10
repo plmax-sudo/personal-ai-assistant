@@ -21,6 +21,11 @@ This project aims to create a local AI assistant running on a Raspberry Pi 5 (16
 - [x] Connect Open WebUI to the local Ollama instance.
 - [x] Verify local access at `http://localhost:3000`.
 
+### 3. Web Search Integration (SearXNG)
+- [x] Deploy SearXNG container.
+- [x] Configure `settings.yml` to allow JSON output.
+- [ ] Connect Open WebUI to SearXNG (User task in Admin Panel).
+
 ## Backlog / Future Tasks
 - [ ] **Hybrid Gemini CLI Integration:** Configure routing logic to use local Gemma 4 for simple tasks and Gemini 3/3.1 Cloud for complex reasoning.
 - [ ] **Cloudflare Tunnel:** Secure the local instance for remote access.
