@@ -27,10 +27,13 @@ This project aims to create a local AI assistant running on a Raspberry Pi 5 (16
 - [ ] Connect Open WebUI to SearXNG (User task in Admin Panel).
 
 ## Backlog / Future Tasks
+- [ ] **Push Notifications (ntfy.sh):** Implement an Open WebUI Function to send push notifications via ntfy.sh (e.g., to topic `max-pi-assistant`) when long-running reasoning tasks are completed.
 - [ ] **Hybrid Gemini CLI Integration:** Configure routing logic to use local Gemma 4 for simple tasks and Gemini 3/3.1 Cloud for complex reasoning.
-- [ ] **Cloudflare Tunnel:** Secure the local instance for remote access.
 - [ ] **Personal Assistant Persona:** Build out custom system prompts and knowledge base in Open WebUI.
 
 ## Project Notes
 - **Hardware:** Raspberry Pi 5, 16GB RAM, Intenso M.2 SSD PCIe Premium.
-- **Model Recommendation:** **Gemma 4 E4B**. This model provides the best balance of speed and intelligence for the Raspberry Pi 5, ensuring a "snappy" user experience. The 26B MoE model was removed as it was too slow for real-time assistant use.
+- **Model Recommendations:**
+    *   **Gemma 4 E2B:** Best for speed (~8-12 t/s). Perfect for quick chats and simple tasks.
+    *   **Gemma 4 E4B (Quantized):** Best balance of intelligence and speed. Use the `q4_K_M` version for snappy responses.
+    *   *Avoid unquantized (FP16) models* as they run at <1 t/s on the Pi CPU.

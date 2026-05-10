@@ -16,6 +16,21 @@ search:
     - html
     - json
 
+# Explicitly enable engines that are usually stable
+engines:
+  - name: google
+    engine: google
+    shortcut: g
+  - name: duckduckgo
+    engine: duckduckgo
+    shortcut: ddg
+  - name: wikipedia
+    engine: wikipedia
+    shortcut: w
+  - name: bing
+    engine: bing
+    shortcut: b
+
 enabled_plugins:
   - 'Hash plugin'
   - 'Self Information'
@@ -24,3 +39,7 @@ enabled_plugins:
 
 bot_detection:
   enabled: false
+
+outgoing:
+  request_timeout: 10.0
+  user_agent_topology: 'chrome'
