@@ -1,0 +1,7 @@
+# Data folders
+ollama_data/
+open-webui_data/
+/usr/share/ollama/.ollama # Not that this would be here, but just in case
+
+# Docker
+.env
